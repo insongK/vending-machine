@@ -2,6 +2,8 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include <QMessageBox>
+#include <QString>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,6 +19,8 @@ public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
     int money{0};
+    void check_money(int money);
+    void showMessage(int money);
 
 private slots:
     void on_pb10_clicked();
